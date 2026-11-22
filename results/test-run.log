@@ -1,0 +1,42 @@
+test_bounded_generated_witnesses_roundtrip (test_parameter_dictionary.TestTypeICrosswalk.test_bounded_generated_witnesses_roundtrip) ... ok
+test_example_p73 (test_parameter_dictionary.TestTypeICrosswalk.test_example_p73) ... ok
+test_gcd_normalization_on_pw_input (test_parameter_dictionary.TestTypeICrosswalk.test_gcd_normalization_on_pw_input) ... ok
+test_nontrivial_rosati_gcd_type_i (test_parameter_dictionary.TestTypeICrosswalk.test_nontrivial_rosati_gcd_type_i) ... ok
+test_rosati_type_i_example (test_parameter_dictionary.TestTypeICrosswalk.test_rosati_type_i_example) ... ok
+test_bounded_generated_witnesses_roundtrip (test_parameter_dictionary.TestTypeIICrosswalk.test_bounded_generated_witnesses_roundtrip) ... ok
+test_example_p409 (test_parameter_dictionary.TestTypeIICrosswalk.test_example_p409) ... ok
+test_gcd_normalization_roundtrip (test_parameter_dictionary.TestTypeIICrosswalk.test_gcd_normalization_roundtrip) ... ok
+test_nontrivial_rosati_gcd_type_ii (test_parameter_dictionary.TestTypeIICrosswalk.test_nontrivial_rosati_gcd_type_ii) ... ok
+test_rosati_type_ii_example (test_parameter_dictionary.TestTypeIICrosswalk.test_rosati_type_ii_example) ... ok
+test_finite_regression_witnesses (test_rosati_dahan_bridge.TestRosatiDahanBridge.test_finite_regression_witnesses) ... ok
+test_reject_bad_type_i_congruence (test_rosati_dahan_bridge.TestRosatiDahanBridge.test_reject_bad_type_i_congruence) ... ok
+test_reject_bad_type_ii_congruence (test_rosati_dahan_bridge.TestRosatiDahanBridge.test_reject_bad_type_ii_congruence) ... ok
+test_reject_wrong_rosati_type (test_rosati_dahan_bridge.TestRosatiDahanBridge.test_reject_wrong_rosati_type) ... ok
+test_type_i_gcd_normalization (test_rosati_dahan_bridge.TestRosatiDahanBridge.test_type_i_gcd_normalization) ... ok
+test_type_i_normalized_witness_to_rosati (test_rosati_dahan_bridge.TestRosatiDahanBridge.test_type_i_normalized_witness_to_rosati) ... ok
+test_type_i_rosati_to_normalized_witness (test_rosati_dahan_bridge.TestRosatiDahanBridge.test_type_i_rosati_to_normalized_witness) ... ok
+test_type_ii_dahan_to_rosati (test_rosati_dahan_bridge.TestRosatiDahanBridge.test_type_ii_dahan_to_rosati) ... ok
+test_type_ii_gcd_normalization (test_rosati_dahan_bridge.TestRosatiDahanBridge.test_type_ii_gcd_normalization) ... ok
+test_type_ii_rosati_to_dahan (test_rosati_dahan_bridge.TestRosatiDahanBridge.test_type_ii_rosati_to_dahan) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.013s
+
+OK
+Type II witness: {'p': 409, 'A': 1, 'B': 117, 'C': 2, 'D': 1, 'u': 1, 'a': 2, 's': 7, 'normalizing_gcd': 1}
+Type II exact fraction check: True
+Normalized Type-I witness: {'p': 73, 'A': 1, 'B': 5, 'C': 2, 'D': 11, 'u': 2, 'a': 1, 's': 15, 'v': 5, 'alpha': 11}
+Type I exact fraction check: True
+Type II: p=409, Rosati=(1, 117, 2, 1)
+  P&W parameters=(1, 117, 59); exact identity=True
+  unit-fraction denominators=(95706, 818, 117)
+Type I: p=73, Rosati=(1, 5, 2, 11)
+  P&W parameters=(1, 11, 15); exact identity=True
+  unit-fraction denominators=(110, 22, 4015)
+Type II, gcd normalization: p=313, Rosati=(4, 10, 2, 2)
+  P&W parameters=(2, 5, 7); exact identity=True
+  unit-fraction denominators=(12520, 5008, 80)
+Type I, gcd normalization: p=241, Rosati=(3, 66, 3, 7)
+  P&W parameters=(1, 63, 11); exact identity=True
+  unit-fraction denominators=(1386, 63, 334026)
+All four exact sample decompositions verified.

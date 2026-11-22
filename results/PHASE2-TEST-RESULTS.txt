@@ -1,0 +1,14 @@
+Phase 2 corrected pack - local verification run
+Python: 3.13.5
+Command: python -m unittest discover -s tests -v
+Result: Ran 20 tests in 0.015s - OK
+
+Command: python src/rosati_dahan_bridge.py
+Type II exact fraction check: True
+Type I exact fraction check: True
+
+Command: python src/phase2_demo.py
+All four exact sample decompositions verified.
+
+No third-party package is required. The tests and demo use the Python standard library only.
+This is a finite code regression report, not a proof of the Erdős-Straus conjecture.
