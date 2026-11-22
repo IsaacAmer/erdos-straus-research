@@ -1,0 +1,21 @@
+Independent C++17 exhaustive search summary
+Command: g++ -O3 -march=native -std=c++17 typeII_u_bound.cpp -o typeII_u_bound
+         ./typeII_u_bound 100000000
+
+N=100000000 primes_p_mod24_1=719781
+min_u=1 count=719778
+min_u=2 count=2
+min_u=3 count=0
+min_u=4 count=1
+no_witness_u_le_4=0
+max_Q=275841 at p=22067161 a=2318 k=20
+max_a=5839 at p=41900329 Q=134296 k=78
+max_k=4999961 at p=99999217 a=2 Q=5
+elapsed=4.94 sec
+
+Exceptional to u=1, with first witness found at larger u:
+p=193: u=2,a=1,Q=5,r=7,k=5,s=39
+p=2521: u=2,a=1,Q=29,r=31,k=11,s=87
+p=66529: u=4,a=11,Q=1041,r=95,k=4,s=703
+
+This is finite computational evidence only, not a proof for all primes.

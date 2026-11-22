@@ -1,0 +1,13 @@
+p=193, Dahan normalized Type-II witness (u,a,s)=(2,1,39)
+Rosati tuple (A,B,C,D)=(2,5,1,5)
+4/193 = 1/4825 + 1/1930 + 1/50
+
+p=2521, Dahan normalized Type-II witness (u,a,s)=(2,1,87)
+Rosati tuple (A,B,C,D)=(2,29,1,11)
+4/2521 = 1/804199 + 1/55462 + 1/638
+
+p=66529, Dahan normalized Type-II witness (u,a,s)=(4,11,703)
+Rosati tuple (A,B,C,D)=(4,1041,11,4)
+4/66529 = 1/3047294316 + 1/11709104 + 1/16656
+
+All equalities are exact; denominators are reconstructed from the normalized Type-II witnesses and checked with rational arithmetic.
