@@ -1,0 +1,77 @@
+{
+  "p": 1000000009,
+  "prime_verified_by_trial_division": true,
+  "p_mod_24": 1,
+  "repeats_per_u": 3,
+  "methodology": "one warm-up per algorithm, then median of three measured calls; exact witness-set equality required",
+  "environment": {
+    "python_version": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "implementation": "CPython",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "processor": "",
+    "logical_cpu_count": 3
+  },
+  "rows": [
+    {
+      "p": 1000000009,
+      "u": 1,
+      "k_candidates": 15658,
+      "witness_count": 44,
+      "phase7_median_seconds": 4.710205475000009,
+      "phase8_median_seconds": 0.02612811099999135,
+      "speedup_phase7_over_phase8": 180.27347920412495,
+      "phase8_small_factor_divisibility_tests": 155293,
+      "repeats": 3,
+      "witness_sets_identical": true,
+      "witness_identities_verified": true
+    },
+    {
+      "p": 1000000009,
+      "u": 2,
+      "k_candidates": 7818,
+      "witness_count": 5,
+      "phase7_median_seconds": 2.2894430750000083,
+      "phase8_median_seconds": 0.01478203400000666,
+      "speedup_phase7_over_phase8": 154.8801115596796,
+      "phase8_small_factor_divisibility_tests": 72131,
+      "repeats": 3,
+      "witness_sets_identical": true,
+      "witness_identities_verified": true
+    },
+    {
+      "p": 1000000009,
+      "u": 3,
+      "k_candidates": 5158,
+      "witness_count": 13,
+      "phase7_median_seconds": 1.7849602450000361,
+      "phase8_median_seconds": 0.012300450999987333,
+      "speedup_phase7_over_phase8": 145.1133982812398,
+      "phase8_small_factor_divisibility_tests": 45850,
+      "repeats": 3,
+      "witness_sets_identical": true,
+      "witness_identities_verified": true
+    },
+    {
+      "p": 1000000009,
+      "u": 4,
+      "k_candidates": 3852,
+      "witness_count": 6,
+      "phase7_median_seconds": 1.125307953000036,
+      "phase8_median_seconds": 0.010442010000019764,
+      "speedup_phase7_over_phase8": 107.76736988356295,
+      "phase8_small_factor_divisibility_tests": 33257,
+      "repeats": 3,
+      "witness_sets_identical": true,
+      "witness_identities_verified": true
+    }
+  ],
+  "aggregate": {
+    "k_candidates_total": 32486,
+    "witnesses_total": 68,
+    "phase7_sum_of_medians_seconds": 9.90991674800009,
+    "phase8_sum_of_medians_seconds": 0.06365260600000511,
+    "speedup": 155.68752594354572,
+    "phase8_divisibility_tests_total": 306531,
+    "all_witness_sets_identical": true
+  }
+}

@@ -1,0 +1,15 @@
+Erdos-Straus Phase 7 vs Phase 8 exact Type-II search
+UTC: 2026-11-23T15:30:53.976971+00:00
+Python: 3.15.2 (tags/v3.15.2:5e58eaa, Oct 25 2026, 17:27:03) [MSC v.1951 64 bit (AMD64)]
+Platform: Windows-11-10.0.26200-SP0
+
+Per-prime aggregate (sum of medians over u=1..4):
+p | Phase7 seconds | Phase8 seconds | speedup | all witnesses equal
+193 | 0.000058300 | 0.000036800 | 1.58x | True
+2521 | 0.000187300 | 0.000092300 | 2.03x | True
+66529 | 0.002163300 | 0.000513800 | 4.21x | True
+10009 | 0.000680600 | 0.000278800 | 2.44x | True
+100057 | 0.003233100 | 0.000742700 | 4.35x | True
+1000033 | 0.015388800 | 0.002153300 | 7.15x | True
+10000537 | 0.124050300 | 0.007602600 | 16.32x | True
+100000081 | 0.955272000 | 0.021971900 | 43.48x | True

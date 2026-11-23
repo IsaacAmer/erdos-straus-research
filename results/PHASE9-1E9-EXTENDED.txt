@@ -1,0 +1,9 @@
+Phase 9 extended run: p=1,000,000,009; p prime and 1 mod 24.
+Three measured repetitions per u after one warm-up; values are medians.
+u | k candidates | witnesses | Phase7 seconds | Phase8 seconds | speedup | residue tests
+1 | 15658 | 44 | 4.710205475 | 0.026128111 | 180.27x | 155293
+2 | 7818 | 5 | 2.289443075 | 0.014782034 | 154.88x | 72131
+3 | 5158 | 13 | 1.784960245 | 0.012300451 | 145.11x | 45850
+4 | 3852 | 6 | 1.125307953 | 0.010442010 | 107.77x | 33257
+
+Totals: k=32486, witnesses=68, Phase7=9.909916748s, Phase8=0.063652606s, speedup=155.69x, Phase8 divisibility tests=306531, exact witness sets identical=True
