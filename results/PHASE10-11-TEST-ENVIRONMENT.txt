@@ -1,0 +1,8 @@
+Python 3.13.5
+Linux f5ddc6de3c64 6.18.57 #1 SMP Tue Oct 20 21:56:04 UTC 2026 x86_64 GNU/Linux
+Commands executed:
+PYTHONPATH=src python -m unittest discover -s tests -v
+PYTHONPATH=src python src/phase10_demo.py --output results/PHASE10-JACOBI-AUDIT.json
+PYTHONPATH=src python src/phase11_demo.py --limit 10000 --output results/PHASE11-CHARACTER-CLASSIFICATION-10000.json
+PYTHONPATH=src python src/phase11_span_demo.py
+Observed: 17/17 tests passed; 246/246 Jacobi audits passed; 8/8 span certificates verified.

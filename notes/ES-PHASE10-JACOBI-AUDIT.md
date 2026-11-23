@@ -1,13 +1,11 @@
-# المرحلة العاشرة — تدقيق جاكوبي مستقل لشواهد Type II
+# Phase 10 — Independent Jacobi audit of the project's Type-II witnesses
 
-**Erdős–Straus Research Lab · 23 نوفمبر 2026**  
-**الحالة:** تدقيق حاسوبي لقيود نظرية منشورة، وليس اكتشافًا لقيود جاكوبي جديدة.
+**Erdős–Straus Research Lab · 23 November 2026**  
+**Status:** independent implementation and finite audit of a published theorem; no new Jacobi reciprocity law is claimed.
 
-## 1. لماذا هذه المرحلة؟
+## 1. Published result being checked
 
-بعد اكتمال المرحلة التاسعة، كان المسار المقترح هو دراسة العلاقات بين فروع Type II الأربع. لكن مراجعة نص Benjamin Dahan، *Composite witness sieves, Kneser–Plancherel containers, and the exponent 5/7 for the Erdős–Straus conjecture*، arXiv:2611.08717، كشفت أن الورقة تتضمن بالفعل نتيجة مباشرة لهذا السؤال: **Theorem 2.4 (Global Jacobi reciprocity law)**.
-
-تذكر الورقة أن كل شاهد Type II، للأولي \(p\equiv1\pmod4\)، يحقق:
+Benjamin Dahan's arXiv preprint *Composite witness sieves, Kneser–Plancherel containers, and the exponent 5/7 for the Erdős–Straus conjecture* (arXiv:2611.08717v1, 5 November 2026), Theorem 2.4, establishes six Jacobi-symbol identities on the Type-II variety. For a prime \(p\equiv1\pmod4\), and a Type-II witness in the normal form used in the proof, the identities are
 
 \[
 \left(\frac{\alpha}{s}\right)=1,
@@ -15,7 +13,7 @@
 \left(\frac{ua}{s}\right)=1,
 \]
 
-وكذلك:
+and
 
 \[
 \left(\frac{s}{p}\right)=
@@ -26,61 +24,62 @@
 \left(\frac{\alpha c}{p}\right)=-1.
 \]
 
-هذه القيود منشورة في المسودة المشار إليها، ولا ننسبها إلى مشروعنا. مرجعها الدقيق هو Theorem 2.4، الصفحات 11–12 من نسخة arXiv التي تمت مراجعتها.
+These are Dahan's identities, not discoveries of this repository. The theorem and its proof appear in Section 2.2 of the cited preprint.
 
-## 2. المطابقة الدقيقة مع مخرجات Phase 8
+## 2. Exact identification of the project's variables
 
-تعيد Phase 8 الشاهد بالحقول:
-
-\[
-(u,a,s,v,e,k).
-\]
-
-ومن هويات البرنامج:
-
-\[
-M=p+4ku^2=se,
-\qquad s+1=4uka,
-\]
+Phase 8 returns a witness \((u,a,s,v,e,k)\) satisfying the four exact integer identities
 
 \[
 ap+u=sv,
-\qquad u+v=ae,
+\qquad s+1=4uak,
+\]
+
+\[
+u+v=ae,
 \qquad p+e=4ukv.
 \]
 
-بمقارنة هذه العلاقات مع صياغة Dahan في Theorem 2.1 وTheorem 2.4 تكون مطابقة الرموز:
+Dahan's Type-II normal form in the proof of Theorem 2.4 is
 
-| Phase 8 | Dahan | المعنى |
-|---|---|---|
-| `u` | \(u\) | المعامل الأول |
-| `a` | \(a\) | modulator |
-| `s` | \(s\) | divisor satisfying the congruence |
-| `v` | \(v\) | complementary Type-II parameter |
-| `e` | \(c\) | shift / complementary factor |
-| `k` | \(\alpha\) | shift multiplier in \(p+4\alpha u^2\) |
+\[
+ap=4a\alpha uv-u-v,
+\qquad s=4ua\alpha-1,
+\qquad c=\frac{u+v}{a},
+\]
 
-إذًا اختبارات جاكوبي الستة في هذه المرحلة هي تطبيق حرفي للنتيجة المنشورة، وليست شروطًا اخترعناها.
+so that \(p+c=4\alpha uv\). From the Phase 8 identities,
 
-## 3. ما الذي ينفذه الكود؟
+\[
+ap=sv-u=(4uak-1)v-u=4auk v-u-v,
+\]
 
-`src/phase10_jacobi_audit.py` ينفذ حساب رمز جاكوبي \((a/n)\) بخوارزمية إقليدية صحيحة للأعداد الصحيحة، دون الاعتماد على SymPy أو أي مكتبة خارجية. ثم يدقق لكل شاهد:
+and \(c=(u+v)/a=e\). Therefore the exact coordinate map is
 
-1. الهويات الحسابية الأربع الأصلية.
-2. \((\alpha/s)=+1\).
-3. \((ua/s)=+1\).
-4. \((s/p)=-1\).
-5. \((p/s)=-1\).
-6. \((uv/p)=-1\).
-7. \((\alpha c/p)=-1\).
+\[
+\boxed{\alpha=k,\qquad c=e,}
+\]
 
-يفحص كذلك أن \(p\) أولي وأن \(p\equiv1\pmod{24}\)، لأن استخدام رمز ليجندر في المقام \(p\) يتطلب أولية المقام. ويعيد تقريرًا لكل شاهد بدل الاكتفاء بنتيجة نجاح/فشل واحدة.
+with \(u,a,s,v\) unchanged. This establishes the correspondence algebraically, rather than relying on a superficial similarity of notation.
 
-## 4. النتيجة التجريبية المستقلة
+## 3. What the audit code checks
 
-أُجري التدقيق على تسعة أعداد أولية من مجموعة القياس في المرحلة التاسعة، مع جميع القيم \(u=1,2,3,4\):
+`src/phase10_jacobi_audit.py` implements the Jacobi symbol by the Euclidean reciprocity algorithm using only Python's standard library. For every supplied Phase 8 witness, it first rechecks
 
-| \(p\) | عدد شواهد Type II المستخرجة |
+\[
+ap+u=sv,\quad s+1=4uak,\quad u+v=ae,
+\quad p+e=4ukv,
+\]
+
+and \(\gcd(u,a)=1\). It then evaluates all six published Jacobi identities under the mapping \(\alpha=k,c=e\).
+
+The checker verifies that \(p\) is prime and \(p\equiv1\pmod{24}\), and that \(s\) is odd before evaluating Jacobi symbols. A corrupted witness is deliberately included in the tests to ensure that the audit rejects it.
+
+## 4. Reproducible finite audit
+
+The audit covers nine primes, each congruent to 1 modulo 24, with all four values \(u=1,2,3,4\). The witness counts are:
+
+| \(p\) | Witnesses across \(u=1,2,3,4\) |
 |---:|---:|
 | 193 | 2 |
 | 2,521 | 3 |
@@ -91,45 +90,31 @@ ap+u=sv,
 | 10,000,537 | 42 |
 | 100,000,081 | 49 |
 | 1,000,000,009 | 68 |
-| **المجموع** | **246** |
+| **Total** | **246** |
 
-النتيجة: **246 من 246 شاهدًا اجتازت قيود جاكوبي الستة والهويات الحسابية الأربع؛ لم يظهر أي إخفاق.**
+Result: **246/246 witness records passed all six Jacobi identities and the four integer-identity checks; zero failures.** The complete record is saved in `results/PHASE10-JACOBI-AUDIT.json`.
 
-وهذا تدقيق consistency للبيانات البرمجية مع نظرية Dahan. لا يثبت وجود شاهد لكل أولي، لأن العينة محدودة، ولا يثبت أن \(u\leq4\) كافٍ عالميًا.
+This is a consistency audit of the program's outputs on nine primes. It neither proves that a witness exists for every prime nor proves the project's proposed restriction \(u\le4\).
 
-## 5. الاختبارات
+## 5. Tests and reproduction
 
-يتضمن `tests/test_phase10_jacobi_audit.py` سبعة اختبارات:
+The seven tests in `tests/test_phase10_jacobi_audit.py` cover reference Jacobi values, quadratic reciprocity, invalid denominators, two known witnesses for \(p=73\), all 246 sample witnesses, rejection of invalid prime inputs, and detection of a corrupted witness.
 
-- قيم مرجعية لرمز جاكوبي.
-- التبادلية التربيعية للأعداد الفردية الأولية نسبيًا.
-- رفض مقامات جاكوبي غير الصالحة.
-- فحص شواهد \(p=73\) يدويًا.
-- تدقيق الشواهد الـ246 على الأعداد التسعة.
-- رفض مدخلات ليست أعدادًا أولية في الفئة المطلوبة.
-- اكتشاف شهادة أفسدنا أحد حقولها عمدًا.
-
-## 6. التشغيل
-
-من جذر المستودع:
+From the repository root:
 
 ```powershell
 python -m unittest discover -s tests -p "test_phase10_jacobi_audit.py" -v
-python -m unittest discover -s tests -v
 python src/phase10_demo.py
 ```
 
-ينتج الأمر الأخير `results/PHASE10-JACOBI-AUDIT.json`، ويتضمن كل شاهد وقيم رموز جاكوبي الستة ونتيجة تدقيق الهويات.
+## 6. Research status
 
-## 7. حدود الأصالة وما يمكن أن يأتي لاحقًا
+- **Published by Dahan:** Theorem 2.4 and all six Jacobi identities.
+- **Implemented here:** an exact independent Jacobi-symbol routine and an audit of the project's Type-II witness records against those identities.
+- **Verified in the finite sample:** all 246 witness records passed.
+- **Not established:** a universal witness for every \(p\equiv1\pmod{24}\), or the conjecture that a witness always exists with \(u\le4\).
+- **Novelty:** no priority claim is made for the reciprocity laws. The project contribution in this phase is a reproducible software audit.
 
-- قانون جاكوبي العالمي منشور في Dahan، Theorem 2.4؛ لا ندعي اكتشافه.
-- إسهامنا في هذه المرحلة هو تنفيذ تدقيق مستقل قابل لإعادة الإنتاج وربطه مباشرة بمخرجات محرك Phase 8.
-- قد تُستخدم الرموز كمرشح قبل اختبار القسمة في بعض الفروع، لكن ذلك لا يعني تحسينًا زمنيًا تلقائيًا. تجربة أولية أظهرت أن حساب رمز جاكوبي لكل مرشح قد يكون أبطأ من اختبار باقي القسمة نفسه؛ لذلك لم نغيّر Phase 8 ولم ندّعِ تسريعًا.
-- السؤال النظري الصعب المتبقي هو: هل تفرض بنية جاكوبي أو البنية التوافقية المشتركة أن ينجح فرع واحد على الأقل من \(u=1,2,3,4\)؟ لا يوجد في هذه المرحلة برهان لهذا الادعاء.
+## Reference
 
-## 8. المصدر
-
-Benjamin Dahan, *Composite witness sieves, Kneser–Plancherel containers, and the exponent 5/7 for the Erdős–Straus conjecture*, arXiv:2611.08717 (2026), Theorem 2.1 وTheorem 2.4.
-
-https://arxiv.org/abs/2611.08717
+Benjamin Dahan, *Composite witness sieves, Kneser–Plancherel containers, and the exponent 5/7 for the Erdős–Straus conjecture*, arXiv:2611.08717v1 (5 November 2026), Theorem 2.4, Section 2.2: https://arxiv.org/abs/2611.08717

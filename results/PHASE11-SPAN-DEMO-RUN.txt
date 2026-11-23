@@ -1,0 +1,10 @@
+p=73, u=1, a=2: target=-1, subset=[7], product=7, square quotient=True
+p=193, u=1, a=2: target=r, subset=[3], product=3, square quotient=True
+p=193, u=2, a=3: target=r, subset=[7, 83], product=581, square quotient=True
+p=2521, u=4, a=3: target=-1, subset=[23], product=23, square quotient=True
+p=10009, u=3, a=2: target=r, subset=[20021], product=20021, square quotient=True
+p=100057, u=2, a=3: target=-1, subset=[23], product=23, square quotient=True
+p=193, u=2, a=1: target=r, subset=[3], product=3, square quotient=True
+p=193, u=4, a=1: target=r, subset=[197], product=197, square quotient=True
+All square-class certificates verified: True
+Saved: results/PHASE11-SQUARE-CLASS-SPAN-EXAMPLES.json

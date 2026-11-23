@@ -1,0 +1,201 @@
+{
+  "study": "Square-class span certificates derived from Dahan Theorem 2.8 and Phase 11 Lemma 11.1",
+  "scope": "six exact sample pairs (p,u,a), all with p prime and p == 1 mod 24",
+  "records": [
+    {
+      "p": 73,
+      "u": 1,
+      "a": 2,
+      "modulus": 8,
+      "M_ap_plus_u": 147,
+      "multiplicativity_obstruction_source": "project-derived conductor extension for u=1",
+      "square_class_group_dimension": 2,
+      "selected_prime_factor_count": 1,
+      "distinct_prime_factors": [
+        3,
+        7
+      ],
+      "target_square_class": "-1",
+      "selected_prime_factors": [
+        7
+      ],
+      "selected_subproduct": 7,
+      "target_residue_modulus": 7,
+      "subproduct_times_target_inverse_modulus": 1,
+      "quotient_is_square_modulus": true,
+      "r_is_square": false,
+      "minus_r_is_square": false
+    },
+    {
+      "p": 193,
+      "u": 1,
+      "a": 2,
+      "modulus": 8,
+      "M_ap_plus_u": 387,
+      "multiplicativity_obstruction_source": "project-derived conductor extension for u=1",
+      "square_class_group_dimension": 2,
+      "selected_prime_factor_count": 1,
+      "distinct_prime_factors": [
+        3,
+        43
+      ],
+      "target_square_class": "r",
+      "selected_prime_factors": [
+        3
+      ],
+      "selected_subproduct": 3,
+      "target_residue_modulus": 3,
+      "subproduct_times_target_inverse_modulus": 1,
+      "quotient_is_square_modulus": true,
+      "r_is_square": false,
+      "minus_r_is_square": false
+    },
+    {
+      "p": 193,
+      "u": 2,
+      "a": 3,
+      "modulus": 24,
+      "M_ap_plus_u": 581,
+      "multiplicativity_obstruction_source": "Dahan Theorem 2.8(b)",
+      "square_class_group_dimension": 3,
+      "selected_prime_factor_count": 2,
+      "distinct_prime_factors": [
+        7,
+        83
+      ],
+      "target_square_class": "r",
+      "selected_prime_factors": [
+        7,
+        83
+      ],
+      "selected_subproduct": 581,
+      "target_residue_modulus": 5,
+      "subproduct_times_target_inverse_modulus": 1,
+      "quotient_is_square_modulus": true,
+      "r_is_square": false,
+      "minus_r_is_square": false
+    },
+    {
+      "p": 2521,
+      "u": 4,
+      "a": 3,
+      "modulus": 48,
+      "M_ap_plus_u": 7567,
+      "multiplicativity_obstruction_source": "Dahan Theorem 2.8(b)",
+      "square_class_group_dimension": 3,
+      "selected_prime_factor_count": 1,
+      "distinct_prime_factors": [
+        7,
+        23,
+        47
+      ],
+      "target_square_class": "-1",
+      "selected_prime_factors": [
+        23
+      ],
+      "selected_subproduct": 23,
+      "target_residue_modulus": 47,
+      "subproduct_times_target_inverse_modulus": 25,
+      "quotient_is_square_modulus": true,
+      "r_is_square": false,
+      "minus_r_is_square": false
+    },
+    {
+      "p": 10009,
+      "u": 3,
+      "a": 2,
+      "modulus": 24,
+      "M_ap_plus_u": 20021,
+      "multiplicativity_obstruction_source": "Dahan Theorem 2.8(b)",
+      "square_class_group_dimension": 3,
+      "selected_prime_factor_count": 1,
+      "distinct_prime_factors": [
+        20021
+      ],
+      "target_square_class": "r",
+      "selected_prime_factors": [
+        20021
+      ],
+      "selected_subproduct": 20021,
+      "target_residue_modulus": 5,
+      "subproduct_times_target_inverse_modulus": 1,
+      "quotient_is_square_modulus": true,
+      "r_is_square": false,
+      "minus_r_is_square": false
+    },
+    {
+      "p": 100057,
+      "u": 2,
+      "a": 3,
+      "modulus": 24,
+      "M_ap_plus_u": 300173,
+      "multiplicativity_obstruction_source": "Dahan Theorem 2.8(b)",
+      "square_class_group_dimension": 3,
+      "selected_prime_factor_count": 1,
+      "distinct_prime_factors": [
+        23,
+        31,
+        421
+      ],
+      "target_square_class": "-1",
+      "selected_prime_factors": [
+        23
+      ],
+      "selected_subproduct": 23,
+      "target_residue_modulus": 23,
+      "subproduct_times_target_inverse_modulus": 1,
+      "quotient_is_square_modulus": true,
+      "r_is_square": false,
+      "minus_r_is_square": false
+    },
+    {
+      "p": 193,
+      "u": 2,
+      "a": 1,
+      "modulus": 8,
+      "M_ap_plus_u": 195,
+      "multiplicativity_obstruction_source": "Dahan Theorem 2.8(a), chi_4",
+      "square_class_group_dimension": 2,
+      "selected_prime_factor_count": 1,
+      "distinct_prime_factors": [
+        3,
+        5,
+        13
+      ],
+      "target_square_class": "r",
+      "selected_prime_factors": [
+        3
+      ],
+      "selected_subproduct": 3,
+      "target_residue_modulus": 3,
+      "subproduct_times_target_inverse_modulus": 1,
+      "quotient_is_square_modulus": true,
+      "r_is_square": false,
+      "minus_r_is_square": false
+    },
+    {
+      "p": 193,
+      "u": 4,
+      "a": 1,
+      "modulus": 16,
+      "M_ap_plus_u": 197,
+      "multiplicativity_obstruction_source": "elementary chi_-8 character for (u,a)=(4,1)",
+      "square_class_group_dimension": 2,
+      "selected_prime_factor_count": 1,
+      "distinct_prime_factors": [
+        197
+      ],
+      "target_square_class": "r",
+      "selected_prime_factors": [
+        197
+      ],
+      "selected_subproduct": 197,
+      "target_residue_modulus": 5,
+      "subproduct_times_target_inverse_modulus": 1,
+      "quotient_is_square_modulus": true,
+      "r_is_square": false,
+      "minus_r_is_square": false
+    }
+  ],
+  "all_quotients_verified_squares": true
+}

@@ -1,0 +1,11 @@
+p=193: witnesses=2
+p=2521: witnesses=3
+p=66529: witnesses=1
+p=10009: witnesses=24
+p=100057: witnesses=24
+p=1000033: witnesses=33
+p=10000537: witnesses=42
+p=100000081: witnesses=49
+p=1000000009: witnesses=68
+TOTAL: 246/246 passed; failures=0
+Saved: results/PHASE10-JACOBI-AUDIT.json

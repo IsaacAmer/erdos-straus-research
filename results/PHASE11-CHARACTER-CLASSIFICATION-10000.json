@@ -1,0 +1,86 @@
+{
+  "study": "Explicit quadratic-character classes for small Type-II parameters",
+  "limit": 10000,
+  "conditions": "1<=u<=4, 2<=a<=limit, gcd(u,a)=1, a+u odd",
+  "claims": {
+    "minus_r_square_impossible": true,
+    "character_obstruction_count": "0 if r is a square; otherwise |X|/4 odd characters",
+    "theorem_2_6_scope": "parts (a,b) apply for u in {1,2,3}; part (c) cycle bound additionally requires r mod 8 in {3,5}",
+    "theorem_2_8a_scope": "applies when r == 3 (mod 4)",
+    "theorem_2_8b_scope": "as stated for u=2,3,4 and a>1; u=1 has a separate conductor proof; the admissible a=1 pairs (2,1),(4,1) have explicit odd-character proofs"
+  },
+  "summary_by_u": [
+    {
+      "u": 1,
+      "a_range": [
+        2,
+        10000
+      ],
+      "valid_parameter_pairs": 5000,
+      "r_square_pairs": 1250,
+      "character_filter_active_pairs": 3750,
+      "theorem_2_6_ab_pairs": 5000,
+      "theorem_2_6_c_cycle_bound_pairs": 2500,
+      "theorem_2_8a_pairs": 2500,
+      "theorem_2_8b_or_u1_extension_pairs": 5000,
+      "both_character_and_cycle_bound": 2500,
+      "character_only_relative_to_cycle_bound": 1250,
+      "neither_character_nor_cycle_bound": 1250,
+      "minus_r_square_pairs": 0
+    },
+    {
+      "u": 2,
+      "a_range": [
+        2,
+        10000
+      ],
+      "valid_parameter_pairs": 4999,
+      "r_square_pairs": 466,
+      "character_filter_active_pairs": 4533,
+      "theorem_2_6_ab_pairs": 4999,
+      "theorem_2_6_c_cycle_bound_pairs": 2499,
+      "theorem_2_8a_pairs": 2499,
+      "theorem_2_8b_or_u1_extension_pairs": 4999,
+      "both_character_and_cycle_bound": 2499,
+      "character_only_relative_to_cycle_bound": 2034,
+      "neither_character_nor_cycle_bound": 466,
+      "minus_r_square_pairs": 0
+    },
+    {
+      "u": 3,
+      "a_range": [
+        2,
+        10000
+      ],
+      "valid_parameter_pairs": 3334,
+      "r_square_pairs": 229,
+      "character_filter_active_pairs": 3105,
+      "theorem_2_6_ab_pairs": 3334,
+      "theorem_2_6_c_cycle_bound_pairs": 1668,
+      "theorem_2_8a_pairs": 1667,
+      "theorem_2_8b_or_u1_extension_pairs": 3334,
+      "both_character_and_cycle_bound": 1668,
+      "character_only_relative_to_cycle_bound": 1437,
+      "neither_character_nor_cycle_bound": 229,
+      "minus_r_square_pairs": 0
+    },
+    {
+      "u": 4,
+      "a_range": [
+        2,
+        10000
+      ],
+      "valid_parameter_pairs": 4999,
+      "r_square_pairs": 1250,
+      "character_filter_active_pairs": 3749,
+      "theorem_2_6_ab_pairs": 0,
+      "theorem_2_6_c_cycle_bound_pairs": 0,
+      "theorem_2_8a_pairs": 2500,
+      "theorem_2_8b_or_u1_extension_pairs": 4999,
+      "both_character_and_cycle_bound": 0,
+      "character_only_relative_to_cycle_bound": 3749,
+      "neither_character_nor_cycle_bound": 1250,
+      "minus_r_square_pairs": 0
+    }
+  ]
+}

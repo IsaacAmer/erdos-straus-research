@@ -1,0 +1,5 @@
+u=1: valid=5000, character-filter=3750, T2.6(b)=5000, T2.6(c)=2500, T2.8(a)=2500, char-filter=3750, both(char+cycle)=2500, char-only=1250, neither=1250, minus-r-square=0
+u=2: valid=4999, character-filter=4533, T2.6(b)=4999, T2.6(c)=2499, T2.8(a)=2499, char-filter=4533, both(char+cycle)=2499, char-only=2034, neither=466, minus-r-square=0
+u=3: valid=3334, character-filter=3105, T2.6(b)=3334, T2.6(c)=1668, T2.8(a)=1667, char-filter=3105, both(char+cycle)=1668, char-only=1437, neither=229, minus-r-square=0
+u=4: valid=4999, character-filter=3749, T2.6(b)=0, T2.6(c)=0, T2.8(a)=2500, char-filter=3749, both(char+cycle)=0, char-only=3749, neither=1250, minus-r-square=0
+Saved: results/PHASE11-CHARACTER-CLASSIFICATION-10000.json

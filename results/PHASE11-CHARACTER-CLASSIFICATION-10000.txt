@@ -1,0 +1,11 @@
+Phase 11 parameter-box audit
+Range: 2 <= a <= 10000; 1 <= u <= 4; gcd(u,a)=1; a+u odd.
+Counts are parameter pairs, not primes or Type-II witnesses.
+
+u | valid | r square | character obstruction active | T2.6(a,b) | T2.6(c) | T2.8(a)
+1 | 5000 | 1250 | 3750 | 5000 | 2500 | 2500
+2 | 4999 | 466 | 4533 | 4999 | 2499 | 2499
+3 | 3334 | 229 | 3105 | 3334 | 1668 | 1667
+4 | 4999 | 1250 | 3749 | 0 | 0 | 2500
+
+Pairs with -(a+u) square modulo 4ua: 0 in all four u slices.

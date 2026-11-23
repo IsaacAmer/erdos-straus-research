@@ -1,7 +1,7 @@
 {
-  "study": "Phase 10: Jacobi-symbol audit of Type-II witnesses",
-  "source": "Benjamin Dahan, arXiv:2611.08717, Theorem 2.4",
-  "parameter_mapping": "Phase8 alpha=k and shift c=e",
+  "study": "Phase 10 Jacobi audit",
+  "source": "Dahan arXiv:2611.08717 Theorem 2.4",
+  "mapping": "Phase8 alpha=k, c=e",
   "primes": [
     193,
     2521,
@@ -12,13 +12,6 @@
     10000537,
     100000081,
     1000000009
-  ],
-  "prime_count": 9,
-  "u_values": [
-    1,
-    2,
-    3,
-    4
   ],
   "witness_count": 246,
   "passed_count": 246,

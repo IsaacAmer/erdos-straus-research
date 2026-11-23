@@ -1,0 +1,22 @@
+test_quadratic_reciprocity_on_odd_coprime_inputs (test_phase10_jacobi_audit.JacobiSymbolTests.test_quadratic_reciprocity_on_odd_coprime_inputs) ... ok
+test_rejects_invalid_denominator (test_phase10_jacobi_audit.JacobiSymbolTests.test_rejects_invalid_denominator) ... ok
+test_standard_values (test_phase10_jacobi_audit.JacobiSymbolTests.test_standard_values) ... ok
+test_all_246_witnesses_satisfy_published_jacobi_laws (test_phase10_jacobi_audit.TypeIIJacobiAuditTests.test_all_246_witnesses_satisfy_published_jacobi_laws) ... ok
+test_detects_corrupted_witness (test_phase10_jacobi_audit.TypeIIJacobiAuditTests.test_detects_corrupted_witness) ... ok
+test_known_p73_witnesses (test_phase10_jacobi_audit.TypeIIJacobiAuditTests.test_known_p73_witnesses) ... ok
+test_rejects_composite_or_wrong_residue_prime (test_phase10_jacobi_audit.TypeIIJacobiAuditTests.test_rejects_composite_or_wrong_residue_prime) ... ok
+test_a_equals_one_character_obstructions (test_phase11_small_u_character_profile.SmallUSquareClassTests.test_a_equals_one_character_obstructions) ... ok
+test_dihedral_maximal_subset_bound_example (test_phase11_small_u_character_profile.SmallUSquareClassTests.test_dihedral_maximal_subset_bound_example) ... ok
+test_dihedral_scope_and_source_scope_flags (test_phase11_small_u_character_profile.SmallUSquareClassTests.test_dihedral_scope_and_source_scope_flags) ... ok
+test_exact_odd_character_count_by_linear_algebra (test_phase11_small_u_character_profile.SmallUSquareClassTests.test_exact_odd_character_count_by_linear_algebra) ... ok
+test_explicit_r_square_table_matches_local_criteria (test_phase11_small_u_character_profile.SmallUSquareClassTests.test_explicit_r_square_table_matches_local_criteria) ... ok
+test_local_square_test_matches_brute_force (test_phase11_small_u_character_profile.SmallUSquareClassTests.test_local_square_test_matches_brute_force) ... ok
+test_minus_r_is_never_a_square_for_u_at_most_four (test_phase11_small_u_character_profile.SmallUSquareClassTests.test_minus_r_is_never_a_square_for_u_at_most_four) ... ok
+test_parameter_box_counts_through_10000 (test_phase11_small_u_character_profile.SmallUSquareClassTests.test_parameter_box_counts_through_10000) ... ok
+test_prime_factor_square_class_span_certificates (test_phase11_small_u_character_profile.SmallUSquareClassTests.test_prime_factor_square_class_span_certificates) ... ok
+test_rejects_invalid_pair (test_phase11_small_u_character_profile.SmallUSquareClassTests.test_rejects_invalid_pair) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.892s
+
+OK
