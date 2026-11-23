@@ -1,48 +1,129 @@
-# Erdos-Straus Research Lab — starter repository
+# Erdős–Straus Research Lab
 
-This is a reproducible workspace for investigating the Erdős–Straus conjecture:
+**Status:** Exploratory computational research  
+**Main focus:** Divisor criteria and Type-II witness searches for the Erdős–Straus conjecture
 
-    For every integer n >= 2, find positive integers a,b,c such that
-    4/n = 1/a + 1/b + 1/c.
+## Overview
 
-## Research integrity rules
+The Erdős–Straus conjecture asks whether every integer \(n \geq 2\) admits a representation
 
-- A finite computation is evidence about the tested range, not a proof for all n.
-- Never report a computational result without the exact code, parameters, runtime environment, and saved output.
-- Distinguish theorem, lemma, conjecture, heuristic, computation, and unverified claim.
-- Use exact integer/rational arithmetic. Do not use floating-point equality to verify identities.
-- Before calling an idea new, search the literature and compare the exact statement, not just the wording.
-- Preserve failed approaches and counterexamples.
+\[
+\frac{4}{n}=\frac{1}{x}+\frac{1}{y}+\frac{1}{z},
+\qquad x,y,z\in\mathbb Z_{>0}.
+\]
 
-## Initial setup (Windows PowerShell)
+This repository is a reproducible workbench for studying selected divisor formulations associated with the conjecture. Its current computational focus is the Type-II criterion for primes \(p\equiv 1\pmod{24}\), especially the restricted case \(u=1\). The code explores fixed-parameter and quotient-layer searches, reconstructs candidate witnesses, and checks identities using exact integer arithmetic.
 
-From this folder:
+**This repository does not claim a proof of the Erdős–Straus conjecture.** It also makes no claim that the exploratory reformulations or bounds documented here are new. Novelty and priority require independent literature review.
 
-```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m unittest discover -s tests -v
-```
+## Current scope
 
-The initial checker uses only Python's standard library. Do not install NumPy, Numba, or a large symbolic stack just for this first phase.
+The current code and notes cover:
 
-Optional later additions, only when needed:
+- Exact integer verification of selected Egyptian-fraction decompositions.
+- Parameter conversions and cross-checks among selected Type-I and Type-II formulations.
+- The \(u=1\) Type-II case, including fixed-\(k\) and fixed-quotient formulations.
+- Divisor-residue tests for selected quotient layers, including \(t=3,7,11,15,19\).
+- Finite searches for specified prime inputs, with reconstruction and verification of any reported witness.
 
-- `sympy` for symbolic algebra and factorization experiments.
-- JupyterLab for exploratory notebooks.
-- Lean 4 + Mathlib for formalizing stable lemmas after we know precisely what to prove.
+A finite search that finds no witness only rules out the searched parameter range or the specified restricted case. It does not show that the prime has no Erdős–Straus representation.
 
 ## Repository layout
 
-- `src/erdos_straus.py`: exact arithmetic helpers and a conditional construction.
-- `tests/`: reproducible tests.
-- `research_log.md`: dated session checkpoints.
-- `RESEARCH_PROTOCOL.md`: research and verification standards.
-- `PROJECT_INSTRUCTIONS_AR.md`: instructions to paste into the ChatGPT Project.
-- `sources/`: bibliography records and source PDFs/notes.
-- `results/`: machine outputs; every result must include the command and code version.
-- `notes/`: derivations, counterexamples, and rejected approaches.
+```text
+src/        Python implementations and exact-arithmetic search tools
+tests/      Unit tests for implementations and selected identities
+notes/      Mathematical derivations, proof drafts, and audit notes
+sources/    Bibliographic notes and references
+results/    Saved output from selected computational runs
+```
 
-## Important status of the included construction
+Additional project documents include the research log and research protocol.
 
-The function in `src/erdos_straus.py` checks a *sufficient conditional construction* for a chosen prime p, shift h, and divisor w. It does not prove that suitable h and w exist for every prime. The example p=73 is a test case, not evidence of a general theorem.
+## Requirements
+
+- Python 3.10 or later is recommended.
+- The current test suite is designed to use Python's standard library; no third-party package installation should be required for the commands below.
+
+## Run the tests
+
+### Windows PowerShell
+
+From the repository root:
+
+```powershell
+py -3 -m unittest discover -s tests -v
+```
+
+If you prefer to use the project's existing virtual environment:
+
+```powershell
+.\.venv\Scripts\python.exe -m unittest discover -s tests -v
+```
+
+### Linux / macOS
+
+```bash
+python3 -m unittest discover -s tests -v
+```
+
+The project maintainer reported 58 passing unit tests in the local development environment on 23 November 2026. Re-run the suite after cloning; test results are environment- and revision-specific. Passing tests validate only the tested code paths and examples. They are not a proof of a universal mathematical statement.
+
+## Run selected programs
+
+From the repository root in Windows PowerShell:
+
+```powershell
+python .\src\u1_factor_criterion.py
+python .\src\u1_quotient_layers.py
+python .\src\u1_t15_t19_layers.py
+python .\src\u1_fixed_k_sieve.py
+```
+
+If using the existing virtual environment:
+
+```powershell
+.\.venv\Scripts\python.exe .\src\u1_factor_criterion.py
+.\.venv\Scripts\python.exe .\src\u1_quotient_layers.py
+.\.venv\Scripts\python.exe .\src\u1_t15_t19_layers.py
+.\.venv\Scripts\python.exe .\src\u1_fixed_k_sieve.py
+```
+
+These scripts print selected examples and bounded-search results. Read the corresponding files in `notes/` for the mathematical scope and limitations of each computation.
+
+## Mathematical status and limitations
+
+1. The conjecture remains open; this repository supplies no general proof.
+2. The Type-II identities and divisor criteria used as starting points are related to criteria already present in the literature. This repository records experiments and derivations around them; it does not claim priority for those criteria.
+3. Bounds and equivalences in the notes must be read under their stated hypotheses. A computational test is not a substitute for a proof.
+4. The current \(u=1\) search is a restricted case. Failure at \(u=1\), or failure in finitely many quotient layers, does not imply failure of Type II or of the original conjecture.
+5. No claim is made that the proposed restriction \(u\leq 4\) holds for every prime.
+6. Computational claims should be accompanied by source code, exact input ranges, and reproducible output.
+
+## Research practice
+
+The project aims to keep the following separate:
+
+- proved algebraic statements;
+- finite computations and their exact search ranges;
+- conjectures and heuristic observations;
+- literature claims that still need source-level verification.
+
+When reporting a computational result, include the input range, algorithm, software environment, output, and the exact mathematical claim the computation does—and does not—support.
+
+## Selected references
+
+- Benjamin Dahan, *Sieve dimension and search depth for the Erdős–Straus conjecture, \(n\equiv1\pmod{24}\)*, arXiv:2608.24035: https://arxiv.org/abs/2608.24035
+- Benjamin Dahan, *Composite witness sieves, Kneser–Plancherel containers, and the exponent \(5/7\) for the Erdős–Straus conjecture*, arXiv:2611.08717: https://arxiv.org/abs/2611.08717
+- Eugen J. Ionascu and Andrew Wilson, *On the Erdős–Straus Conjecture* (2011), *Revue Roumaine de Mathématiques Pures et Appliquées*, 56(1), 21–30: https://www.csm.ro/reviste/Revue_Mathematique/pdfs/2011/1/Ionascu.pdf
+- Kyle Bradford, *Elemental Patterns from the Erdős–Straus Conjecture*, arXiv:2403.16047: https://arxiv.org/abs/2403.16047
+
+See `sources/` for the project's working bibliography. These references are starting points, not an exhaustive literature review.
+
+## Contributions and feedback
+
+Corrections to code, test cases, citations, or mathematical derivations are welcome. Please identify the exact file and claim, and provide a reproducible example where possible. Distinguish a counterexample to a computational subclaim from a counterexample to the Erdős–Straus conjecture itself.
+
+## License
+
+No license is currently specified. Until a license is added, do not assume that the code or notes may be reused, redistributed, or incorporated into another project merely because this repository is publicly viewable.
