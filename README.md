@@ -7,10 +7,8 @@
 
 The Erdős–Straus conjecture asks whether every integer $n \geq 2$ admits a representation
 
-$
-\frac{4}{n}=\frac{1}{x}+\frac{1}{y}+\frac{1}{z},
-\qquad x,y,z\in\mathbb Z_{>0}.
-$
+$$ \frac{4}{n}=\frac{1}{x}+\frac{1}{y}+\frac{1}{z},
+\qquad x,y,z\in\mathbb Z_{>0}. $$
 
 This repository is a reproducible workbench for studying selected divisor formulations associated with the conjecture. Its current computational focus is the Type-II criterion for primes $p\equiv 1\pmod{24}$, especially the restricted case $u=1$. The code explores fixed-parameter and quotient-layer searches, reconstructs candidate witnesses, and checks identities using exact integer arithmetic.
 
@@ -127,4 +125,5 @@ Corrections to code, test cases, citations, or mathematical derivations are welc
 ## License
 
 No license is currently specified. Until a license is added, do not assume that the code or notes may be reused, redistributed, or incorporated into another project merely because this repository is publicly viewable.
+
 

@@ -1,0 +1,12 @@
+﻿cff-version: 1.2.0
+message: "If you use this software or research notes, please cite it as below."
+title: "Erdős–Straus Research Lab"
+authors:
+  - alias: "IsaacAmer"
+repository-code: "https://github.com/IsaacAmer/erdos-straus-research"
+url: "https://github.com/IsaacAmer/erdos-straus-research"
+keywords:
+  - number-theory
+  - erdos-straus-conjecture
+  - egyptian-fractions
+  - experimental-mathematics
