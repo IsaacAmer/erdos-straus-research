@@ -1,0 +1,14 @@
+test_cutoff_order (test_phase12_density_optimization.Phase12OptimizedDensityTests.test_cutoff_order) ... ok
+test_euler_phi_reference_values (test_phase12_density_optimization.Phase12OptimizedDensityTests.test_euler_phi_reference_values) ... ok
+test_exponent_constant_exact_formula (test_phase12_density_optimization.Phase12OptimizedDensityTests.test_exponent_constant_exact_formula) ... ok
+test_family_attains_99_percent_of_rectangular_optimum (test_phase12_density_optimization.Phase12OptimizedDensityTests.test_family_attains_99_percent_of_rectangular_optimum) ... ok
+test_finite_mean_condition_at_audit_values (test_phase12_density_optimization.Phase12OptimizedDensityTests.test_finite_mean_condition_at_audit_values) ... ok
+test_finite_mean_tracks_asymptotic_value (test_phase12_density_optimization.Phase12OptimizedDensityTests.test_finite_mean_tracks_asymptotic_value) ... ok
+test_pair_density_coefficient_exact_formula (test_phase12_density_optimization.Phase12OptimizedDensityTests.test_pair_density_coefficient_exact_formula) ... ok
+test_rejects_invalid_L (test_phase12_density_optimization.Phase12OptimizedDensityTests.test_rejects_invalid_L) ... ok
+test_small_u_totient_coefficients (test_phase12_density_optimization.Phase12OptimizedDensityTests.test_small_u_totient_coefficients) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.008s
+
+OK

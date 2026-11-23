@@ -1,0 +1,7 @@
+Python 3.13.5
+Commands:
+python -m unittest discover -s tests -v
+python src/phase12_density_optimization.py --output results/PHASE12-OPTIMIZED-U4-DENSITY.json
+python -m py_compile src/phase12_density_optimization.py tests/test_phase12_density_optimization.py
+Result: 9/9 unit tests passed.
+The finite profile checks L=100, 200, 500, 1000, 5000, 10000; no prime range is claimed.

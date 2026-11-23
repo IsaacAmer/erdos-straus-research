@@ -1,0 +1,183 @@
+{
+  "title": "Optimized Type-II density corollary for u in {1,2,3,4}",
+  "source_theorem": "Dahan, arXiv:2611.08717v1, Theorem 4.6 (2026-11-05)",
+  "status": "derived corollary; not a new proof of Erdos-Straus",
+  "delta_0": 0.0009765625,
+  "gamma": 0.99,
+  "tau_1_over_8_minus_delta": 0.1240234375,
+  "c_u": {
+    "1": 0.8105694691387022,
+    "2": 1.6211389382774044,
+    "3": 1.82378130556208,
+    "4": 3.242277876554809
+  },
+  "d_u_phi_over_u": {
+    "1": 1.0,
+    "2": 0.5,
+    "3": 0.6666666666666666,
+    "4": 0.5
+  },
+  "x_u_cutoff_coefficients": {
+    "1": 0.15147770524279358,
+    "2": 0.07573885262139679,
+    "3": 0.0673234245523527,
+    "4": 0.037869426310698395
+  },
+  "S_pair_count_coefficient": 0.253164127743743,
+  "rectangular_optimal_pair_count_coefficient": 0.25572134115529593,
+  "fraction_of_rectangular_optimum": 0.99,
+  "kappa_exponent_coefficient": 0.013185631653319946,
+  "finite_audits": [
+    {
+      "L_loglogN": 100,
+      "A_u_cutoffs": {
+        "1": 15,
+        "2": 7,
+        "3": 6,
+        "4": 3
+      },
+      "x_u_coefficients": {
+        "1": 0.15147770524279358,
+        "2": 0.07573885262139679,
+        "3": 0.0673234245523527,
+        "4": 0.037869426310698395
+      },
+      "J": 15,
+      "pair_count_P": 25,
+      "mean_phi_4ua_minus_2_exact": 10.4,
+      "B_log_logz_over_logJ5": 88.18399282263832,
+      "theorem_4_6_mean_threshold": 10.936881922338932,
+      "finite_mean_condition_passes": true,
+      "pair_count_over_L": 0.25,
+      "mean_over_L": 0.10400000000000001,
+      "predicted_asymptotic_pair_count_over_L": 0.253164127743743,
+      "predicted_asymptotic_mean_over_L": 0.122783203125
+    },
+    {
+      "L_loglogN": 200,
+      "A_u_cutoffs": {
+        "1": 30,
+        "2": 15,
+        "3": 13,
+        "4": 7
+      },
+      "x_u_coefficients": {
+        "1": 0.15147770524279358,
+        "2": 0.07573885262139679,
+        "3": 0.0673234245523527,
+        "4": 0.037869426310698395
+      },
+      "J": 30,
+      "pair_count_P": 51,
+      "mean_phi_4ua_minus_2_exact": 22.823529411764707,
+      "B_log_logz_over_logJ5": 186.54999718647213,
+      "theorem_4_6_mean_threshold": 23.1365719166816,
+      "finite_mean_condition_passes": true,
+      "pair_count_over_L": 0.255,
+      "mean_over_L": 0.11411764705882353,
+      "predicted_asymptotic_pair_count_over_L": 0.253164127743743,
+      "predicted_asymptotic_mean_over_L": 0.122783203125
+    },
+    {
+      "L_loglogN": 500,
+      "A_u_cutoffs": {
+        "1": 75,
+        "2": 37,
+        "3": 33,
+        "4": 18
+      },
+      "x_u_coefficients": {
+        "1": 0.15147770524279358,
+        "2": 0.07573885262139679,
+        "3": 0.0673234245523527,
+        "4": 0.037869426310698395
+      },
+      "J": 75,
+      "pair_count_P": 125,
+      "mean_phi_4ua_minus_2_exact": 59.104,
+      "B_log_logz_over_logJ5": 484.49867211277603,
+      "theorem_4_6_mean_threshold": 60.08919077961187,
+      "finite_mean_condition_passes": true,
+      "pair_count_over_L": 0.25,
+      "mean_over_L": 0.118208,
+      "predicted_asymptotic_pair_count_over_L": 0.253164127743743,
+      "predicted_asymptotic_mean_over_L": 0.122783203125
+    },
+    {
+      "L_loglogN": 1000,
+      "A_u_cutoffs": {
+        "1": 151,
+        "2": 75,
+        "3": 67,
+        "4": 37
+      },
+      "x_u_coefficients": {
+        "1": 0.15147770524279358,
+        "2": 0.07573885262139679,
+        "3": 0.0673234245523527,
+        "4": 0.037869426310698395
+      },
+      "J": 151,
+      "pair_count_P": 253,
+      "mean_phi_4ua_minus_2_exact": 121.24901185770752,
+      "B_log_logz_over_logJ5": 982.950235037071,
+      "theorem_4_6_mean_threshold": 121.90886704073048,
+      "finite_mean_condition_passes": true,
+      "pair_count_over_L": 0.253,
+      "mean_over_L": 0.12124901185770752,
+      "predicted_asymptotic_pair_count_over_L": 0.253164127743743,
+      "predicted_asymptotic_mean_over_L": 0.122783203125
+    },
+    {
+      "L_loglogN": 5000,
+      "A_u_cutoffs": {
+        "1": 757,
+        "2": 378,
+        "3": 336,
+        "4": 189
+      },
+      "x_u_coefficients": {
+        "1": 0.15147770524279358,
+        "2": 0.07573885262139679,
+        "3": 0.0673234245523527,
+        "4": 0.037869426310698395
+      },
+      "J": 757,
+      "pair_count_P": 1265,
+      "mean_phi_4ua_minus_2_exact": 611.6395256916996,
+      "B_log_logz_over_logJ5": 4979.452738374488,
+      "theorem_4_6_mean_threshold": 617.5688454819922,
+      "finite_mean_condition_passes": true,
+      "pair_count_over_L": 0.253,
+      "mean_over_L": 0.12232790513833992,
+      "predicted_asymptotic_pair_count_over_L": 0.253164127743743,
+      "predicted_asymptotic_mean_over_L": 0.122783203125
+    },
+    {
+      "L_loglogN": 10000,
+      "A_u_cutoffs": {
+        "1": 1514,
+        "2": 757,
+        "3": 673,
+        "4": 378
+      },
+      "x_u_coefficients": {
+        "1": 0.15147770524279358,
+        "2": 0.07573885262139679,
+        "3": 0.0673234245523527,
+        "4": 0.037869426310698395
+      },
+      "J": 1514,
+      "pair_count_P": 2531,
+      "mean_phi_4ua_minus_2_exact": 1226.327933623074,
+      "B_log_logz_over_logJ5": 9977.966604369283,
+      "theorem_4_6_mean_threshold": 1237.501717534081,
+      "finite_mean_condition_passes": true,
+      "pair_count_over_L": 0.2531,
+      "mean_over_L": 0.1226327933623074,
+      "predicted_asymptotic_pair_count_over_L": 0.253164127743743,
+      "predicted_asymptotic_mean_over_L": 0.122783203125
+    }
+  ],
+  "theorem_bound": "|E_4(N)| <= N*exp(-(kappa+o(1))*(log log N)^2), with kappa=5*S/96"
+}
