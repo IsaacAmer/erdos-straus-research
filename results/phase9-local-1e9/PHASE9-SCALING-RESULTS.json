@@ -1,0 +1,84 @@
+{
+  "benchmark_name": "Erdos-Straus Phase 7 vs Phase 8 exact Type-II search",
+  "timestamp_utc": "2026-11-23T15:31:50.249242+00:00",
+  "environment": {
+    "python_version": "3.15.2 (tags/v3.15.2:5e58eaa, Oct 25 2026, 17:27:03) [MSC v.1951 64 bit (AMD64)]",
+    "implementation": "CPython",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",
+    "logical_cpu_count": 12
+  },
+  "methodology": {
+    "timing": "median of repeated full witness-set searches; perf_counter; warm-up excluded",
+    "repeats": 3,
+    "comparison": "exact equality of sorted TypeIIWitness tuples for each (p,u)",
+    "verification": "all original Type-II identities rechecked for every returned witness",
+    "scope": "fixed p and fixed u in {1,2,3,4}; input p deterministically checked prime and p == 1 mod 24",
+    "caution": "timings are environment-specific; no general asymptotic speedup is inferred from this finite sample"
+  },
+  "rows": [
+    {
+      "p": 1000000009,
+      "u": 1,
+      "k_candidates": 15658,
+      "witness_count": 44,
+      "phase7_median_seconds": 4.5961860999814235,
+      "phase8_median_seconds": 0.03806789999362081,
+      "speedup_phase7_over_phase8": 120.73652869613571,
+      "phase8_small_factor_divisibility_tests": 155293,
+      "repeats": 3,
+      "witness_sets_identical": true,
+      "witness_identities_verified": true
+    },
+    {
+      "p": 1000000009,
+      "u": 2,
+      "k_candidates": 7818,
+      "witness_count": 5,
+      "phase7_median_seconds": 2.132349499996053,
+      "phase8_median_seconds": 0.018340099981287494,
+      "speedup_phase7_over_phase8": 116.26705973095572,
+      "phase8_small_factor_divisibility_tests": 72131,
+      "repeats": 3,
+      "witness_sets_identical": true,
+      "witness_identities_verified": true
+    },
+    {
+      "p": 1000000009,
+      "u": 3,
+      "k_candidates": 5158,
+      "witness_count": 13,
+      "phase7_median_seconds": 1.45698019998963,
+      "phase8_median_seconds": 0.012824499979615211,
+      "speedup_phase7_over_phase8": 113.60912334247166,
+      "phase8_small_factor_divisibility_tests": 45850,
+      "repeats": 3,
+      "witness_sets_identical": true,
+      "witness_identities_verified": true
+    },
+    {
+      "p": 1000000009,
+      "u": 4,
+      "k_candidates": 3852,
+      "witness_count": 6,
+      "phase7_median_seconds": 0.9409362000005785,
+      "phase8_median_seconds": 0.01085130000137724,
+      "speedup_phase7_over_phase8": 86.71184096662662,
+      "phase8_small_factor_divisibility_tests": 33257,
+      "repeats": 3,
+      "witness_sets_identical": true,
+      "witness_identities_verified": true
+    }
+  ],
+  "by_prime": [
+    {
+      "p": 1000000009,
+      "u_values": 4,
+      "witnesses_total": 68,
+      "phase7_sum_of_u_medians_seconds": 9.126451999967685,
+      "phase8_sum_of_u_medians_seconds": 0.08008379995590076,
+      "speedup": 113.96127562619769,
+      "all_witness_sets_identical": true
+    }
+  ]
+}
