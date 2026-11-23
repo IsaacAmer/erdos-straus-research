@@ -3,3 +3,6 @@ __pycache__/
 *.py[cod]
 .ipynb_checkpoints/
 README-BACKUP.md
+
+# Machine-specific local result files
+results/*-LOCAL.json

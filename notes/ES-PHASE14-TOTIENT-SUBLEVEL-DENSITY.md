@@ -1,8 +1,8 @@
 # Phase 14 — The totient-sublevel family and the optimal Type-II density coefficient for fixed small u
 
-**Erdős–Straus Research Lab**  
-**Date:** 23 November 2026  
-**Claim ID:** `ES4-TOTIENT-SUBLEVEL-01`  
+**Erdős–Straus Research Lab**
+**Date:** 23 November 2026
+**Claim ID:** `ES4-TOTIENT-SUBLEVEL-01`
 **Status:** a derived corollary of Dahan's Theorem 4.6, using a Wiener–Ikehara counting argument. It is not a proof of the Erdős–Straus conjecture and does not prove that the small-u exceptional set is empty.
 
 ## 1. Main theorem
