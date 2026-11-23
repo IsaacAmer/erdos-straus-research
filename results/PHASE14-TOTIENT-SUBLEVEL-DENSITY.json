@@ -1,0 +1,201 @@
+{
+  "title": "Totient-sublevel Type-II density family for u=1,2,3,4",
+  "source_theorem": "Dahan, arXiv:2611.08717v1, Theorem 4.6",
+  "status": "derived corollary; no universal Type-II witness and no ES proof claimed",
+  "gamma": 0.999,
+  "delta0": 1.52587890625e-05,
+  "tau": 0.1249847412109375,
+  "T_over_loglogN": 0.24971951293945313,
+  "counting_constants_C_u": {
+    "1": 0.6478654789402531,
+    "2": 0.1619663697350633,
+    "3": 0.18510442255435802,
+    "4": 0.08098318486753164
+  },
+  "sum_C_u": 1.075919456097206,
+  "A_infinity_equals_2_sum_C_u": 2.151838912194412,
+  "A_infinity_formula": "(31/28)*zeta(2)*zeta(3)/zeta(6) = (9765/56)*zeta(3)/pi^4",
+  "kappa_exponent_coefficient": 0.01399365013222269,
+  "kappa_limit_gamma_to_1_delta_to_0": 0.01400936791793237,
+  "fraction_of_limiting_kappa": 0.9988780517578125,
+  "family_definition": "P_N={(u,a):1<=u<=4, gcd(u,a)=1, phi(4*u*a)<=2*gamma*(1/8-delta0)*loglog(N)}",
+  "theorem_bound": "|E_4(N)| <= N*exp(-(kappa+o(1))*(log log N)^2)",
+  "finite_audits": [
+    {
+      "L_loglogN_surrogate": 100,
+      "gamma": 0.999,
+      "delta0": 1.52587890625e-05,
+      "tau": 0.1249847412109375,
+      "totient_cutoff_T": 24.971951293945313,
+      "a_coordinate_bounds_from_phi_lower_bound": {
+        "1": 311,
+        "2": 155,
+        "3": 103,
+        "4": 77
+      },
+      "J_actual_max_coordinate": 21,
+      "J_upper_bound_from_phi_square_inequality": 312,
+      "max_modulus_sieved": 1244,
+      "pair_count_exact": 29,
+      "pair_count_over_L_exact": 0.29,
+      "cost_sum_exact": 348,
+      "mean_phi_4ua_minus_2_exact": 12.0,
+      "mean_over_L": 0.12,
+      "predicted_mean_over_L": 0.12485975646972657,
+      "A_infinity": 2.151838912194412,
+      "predicted_pair_count_coefficient": 0.26867808253867564,
+      "observed_pair_count_coefficient": 0.29,
+      "kappa_asymptotic": 0.01399365013222269,
+      "observed_by_u": {
+        "1": {
+          "count": 17,
+          "cost_sum": 204
+        },
+        "2": {
+          "count": 5,
+          "cost_sum": 66
+        },
+        "3": {
+          "count": 5,
+          "cost_sum": 58
+        },
+        "4": {
+          "count": 2,
+          "cost_sum": 20
+        }
+      }
+    },
+    {
+      "L_loglogN_surrogate": 250,
+      "gamma": 0.999,
+      "delta0": 1.52587890625e-05,
+      "tau": 0.1249847412109375,
+      "totient_cutoff_T": 62.42987823486328,
+      "a_coordinate_bounds_from_phi_lower_bound": {
+        "1": 1948,
+        "2": 974,
+        "3": 649,
+        "4": 487
+      },
+      "J_actual_max_coordinate": 45,
+      "J_upper_bound_from_phi_square_inequality": 1949,
+      "max_modulus_sieved": 7792,
+      "pair_count_exact": 61,
+      "pair_count_over_L_exact": 0.244,
+      "cost_sum_exact": 1628,
+      "mean_phi_4ua_minus_2_exact": 26.688524590163933,
+      "mean_over_L": 0.10675409836065573,
+      "predicted_mean_over_L": 0.12485975646972657,
+      "A_infinity": 2.151838912194412,
+      "predicted_pair_count_coefficient": 0.26867808253867564,
+      "observed_pair_count_coefficient": 0.244,
+      "kappa_asymptotic": 0.01399365013222269,
+      "observed_by_u": {
+        "1": {
+          "count": 37,
+          "cost_sum": 1012
+        },
+        "2": {
+          "count": 9,
+          "cost_sum": 226
+        },
+        "3": {
+          "count": 10,
+          "cost_sum": 248
+        },
+        "4": {
+          "count": 5,
+          "cost_sum": 142
+        }
+      }
+    },
+    {
+      "L_loglogN_surrogate": 500,
+      "gamma": 0.999,
+      "delta0": 1.52587890625e-05,
+      "tau": 0.1249847412109375,
+      "totient_cutoff_T": 124.85975646972656,
+      "a_coordinate_bounds_from_phi_lower_bound": {
+        "1": 7794,
+        "2": 3897,
+        "3": 2598,
+        "4": 1948
+      },
+      "J_actual_max_coordinate": 105,
+      "J_upper_bound_from_phi_square_inequality": 7795,
+      "max_modulus_sieved": 31176,
+      "pair_count_exact": 129,
+      "pair_count_over_L_exact": 0.258,
+      "cost_sum_exact": 7512,
+      "mean_phi_4ua_minus_2_exact": 58.23255813953488,
+      "mean_over_L": 0.11646511627906976,
+      "predicted_mean_over_L": 0.12485975646972657,
+      "A_infinity": 2.151838912194412,
+      "predicted_pair_count_coefficient": 0.26867808253867564,
+      "observed_pair_count_coefficient": 0.258,
+      "kappa_asymptotic": 0.01399365013222269,
+      "observed_by_u": {
+        "1": {
+          "count": 78,
+          "cost_sum": 4606
+        },
+        "2": {
+          "count": 20,
+          "cost_sum": 1180
+        },
+        "3": {
+          "count": 22,
+          "cost_sum": 1256
+        },
+        "4": {
+          "count": 9,
+          "cost_sum": 470
+        }
+      }
+    },
+    {
+      "L_loglogN_surrogate": 1000,
+      "gamma": 0.999,
+      "delta0": 1.52587890625e-05,
+      "tau": 0.1249847412109375,
+      "totient_cutoff_T": 249.71951293945312,
+      "a_coordinate_bounds_from_phi_lower_bound": {
+        "1": 31179,
+        "2": 15589,
+        "3": 10393,
+        "4": 7794
+      },
+      "J_actual_max_coordinate": 231,
+      "J_upper_bound_from_phi_square_inequality": 31180,
+      "max_modulus_sieved": 124716,
+      "pair_count_exact": 266,
+      "pair_count_over_L_exact": 0.266,
+      "cost_sum_exact": 32434,
+      "mean_phi_4ua_minus_2_exact": 121.93233082706767,
+      "mean_over_L": 0.12193233082706767,
+      "predicted_mean_over_L": 0.12485975646972657,
+      "A_infinity": 2.151838912194412,
+      "predicted_pair_count_coefficient": 0.26867808253867564,
+      "observed_pair_count_coefficient": 0.266,
+      "kappa_asymptotic": 0.01399365013222269,
+      "observed_by_u": {
+        "1": {
+          "count": 160,
+          "cost_sum": 19566
+        },
+        "2": {
+          "count": 41,
+          "cost_sum": 5098
+        },
+        "3": {
+          "count": 45,
+          "cost_sum": 5370
+        },
+        "4": {
+          "count": 20,
+          "cost_sum": 2400
+        }
+      }
+    }
+  ]
+}

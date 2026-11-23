@@ -1,0 +1,7 @@
+Python 3.13.5
+Commands executed:
+python -m unittest discover -s tests -v
+python src/phase14_totient_sublevel.py --output results/PHASE14-TOTIENT-SUBLEVEL-DENSITY.json
+python -m py_compile src/phase14_totient_sublevel.py tests/test_phase14_totient_sublevel.py
+Tests: 11/11 passed.
+Finite arithmetic audits: L=100,250,500,1000; exact integer totients; not a prime-range computation.
