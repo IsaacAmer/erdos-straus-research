@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A reproducible computational research workbench exploring Type-II divisor witnesses for the Erdős–Straus conjecture.">
+<title>Erdős–Straus Research Lab</title>
+<style>
+:root{--ink:#17263c;--muted:#5b6b80;--paper:#f5f7fb;--line:#dce3ed;--blue:#164e83;--blue2:#e8f1fa;--gold:#9c6b17;--white:#fff;--max:1080px}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}a{color:var(--blue);text-decoration-thickness:1px;text-underline-offset:3px}.wrap{max-width:var(--max);margin:auto;padding:0 22px}.top{background:#102944;color:white;padding:54px 0 46px}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-size:.76rem;color:#b8d2eb;font-weight:700}.top h1{font-size:clamp(2rem,5vw,3.5rem);line-height:1.08;margin:14px 0}.top p{max-width:760px;color:#e2edf7;font-size:1.08rem}.links{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px}.pill{display:inline-block;padding:9px 15px;border-radius:999px;background:#fff;color:#12314f;font-weight:650;text-decoration:none}.pill.alt{background:transparent;color:#fff;border:1px solid #7895b3}.section{padding:36px 0}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.card{background:var(--white);border:1px solid var(--line);border-radius:15px;padding:22px;box-shadow:0 5px 18px rgba(30,55,80,.04)}h2{font-size:1.55rem;margin:0 0 16px}h3{margin:0 0 9px;font-size:1.08rem}.muted{color:var(--muted)}.notice{border-left:4px solid var(--gold);background:#fff8e8;padding:16px 18px;border-radius:8px;color:#4a3920}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.stat{background:var(--blue2);border-radius:12px;padding:16px}.stat strong{display:block;font-size:1.7rem;color:var(--blue)}.stat span{font-size:.9rem;color:var(--muted)}.math{font-family:Georgia,serif;background:#f7f9fc;border:1px solid var(--line);padding:14px;border-radius:10px;overflow-wrap:anywhere}.footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--muted);font-size:.9rem}ul{padding-left:21px}code{background:#eef2f7;padding:2px 5px;border-radius:4px}@media(max-width:720px){.grid{grid-template-columns:1fr}.stats{grid-template-columns:1fr}.top{padding:42px 0}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<div class="eyebrow">Independent computational mathematics project</div>
+<h1>Erdős–Straus<br>Research Lab</h1>
+<p>A reproducible workbench for exploring selected divisor criteria and Type-II witness searches related to the Erdős–Straus conjecture.</p>
+<div class="links"><a class="pill" href="https://github.com/IsaacAmer/erdos-straus-research">Explore the GitHub repository</a><a class="pill alt" href="#scope">Research scope</a></div>
+</div></header>
+<main class="wrap">
+<section class="section"><div class="notice"><strong>Research status:</strong> exploratory computational research. This project does not prove the Erdős–Straus conjecture, does not establish that the restricted Type-II exceptional set is empty, and makes no claim of confirmed priority for the Phase 14 density calculation.</div></section>
+<section class="section"><h2>What the project studies</h2><div class="grid">
+<article class="card"><h3>Exact arithmetic and witness criteria</h3><p class="muted">Python tools check selected Type-I and Type-II parameterizations, reconstruct witnesses, and verify identities using integer arithmetic.</p></article>
+<article class="card"><h3>Divisor and quotient searches</h3><p class="muted">Bounded quotient-layer and small-factor searches are cross-checked on finite regression sets.</p></article>
+<article class="card"><h3>Character and Jacobi audits</h3><p class="muted">Finite witness collections are checked against published Jacobi-symbol identities and selected square-class conditions.</p></article>
+<article class="card"><h3>Restricted density calculation</h3><p class="muted">A Phase 14 note derives a restricted density corollary from an existing sieve theorem using a totient-selected family of parameters.</p></article>
+</div></section>
+<section class="section"><h2>Recorded computational evidence</h2><div class="stats">
+<div class="stat"><strong>119</strong><span>unit tests reported passing in the recorded local run after Phase 14</span></div>
+<div class="stat"><strong>246/246</strong><span>finite witnesses passed the Phase 10 Jacobi-law audit</span></div>
+<div class="stat"><strong>113.96×</strong><span>reported local Phase 8 / Phase 7 timing ratio on one specified input</span></div>
+</div><p class="muted">These values are from the maintainer's recorded logs. They are environment- and input-specific, and they do not constitute a proof of a universal mathematical statement or a general speed guarantee.</p></section>
+<section class="section" id="scope"><h2>Mathematical scope</h2><div class="card">
+<p>The classical conjecture asks whether every integer <em>n</em> ≥ 2 can be written as a sum of three unit fractions:</p>
+<div class="math">4/n = 1/x + 1/y + 1/z, with x, y, z positive integers.</div>
+<p>The project's recent focus is a restricted Type-II divisor criterion for primes p ≡ 1 (mod 24), with 1 ≤ u ≤ 4 and an admissible parameter a. The Phase 14 note reports an upper bound for the set of primes that fail all such restricted witnesses.</p>
+<p><strong>Important limitation:</strong> a small exceptional-set bound does not prove that the exceptional set is empty. The density calculation is derived from an existing sieve theorem; the novelty of the specific application is not established.</p>
+</div></section>
+<section class="section"><h2>Reproducibility</h2><div class="card"><p>From the repository root, run:</p><pre><code>python -m unittest discover -s tests -v</code></pre><p class="muted">For a reproducible report, record the commit hash, exact Python interpreter, operating system, command, and full output. The repository's CI workflow should be merged and its green runs linked here once available.</p></div></section>
+<section class="section"><h2>Research integrity</h2><div class="card"><ul><li>Published criteria and sieve theorems are attributed to their sources.</li><li>Finite computation is labeled with its exact input range.</li><li>Derived results are distinguished from established literature.</li><li>Unresolved questions and corrections remain documented.</li><li>AI assistance is disclosed; it is not treated as a mathematical authority.</li></ul></div></section>
+</main>
+<footer class="footer"><div class="wrap">Erdős–Straus Research Lab · Maintainer handle: IsaacAmer · <a href="https://github.com/IsaacAmer/erdos-straus-research">Source repository</a><br>Snapshot details and citation metadata should be updated after a tagged archival release.</div></footer>
+</body></html>

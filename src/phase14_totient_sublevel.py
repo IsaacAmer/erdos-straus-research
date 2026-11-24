@@ -200,7 +200,7 @@ def build_report(gamma: Fraction, delta0: Fraction,
         "kappa_limit_gamma_to_1_delta_to_0": kappa_limit(),
         "fraction_of_limiting_kappa": kappa_for_parameters(gamma, delta0) / kappa_limit(),
         "family_definition": "P_N={(u,a):1<=u<=4, gcd(u,a)=1, phi(4*u*a)<=2*gamma*(1/8-delta0)*loglog(N)}",
-        "theorem_bound": "|E_4(N)| <= N*exp(-(kappa+o(1))*(log log N)^2)",
+        "theorem_bound": "Big-O bound: |E_4(N)| = O(N*exp(-(kappa+o(1))*(log log N)^2))",
         "finite_audits": [finite_audit(L, gamma, delta0) for L in L_values],
     }
 

@@ -1,7 +1,8 @@
 # Phase 14 — The totient-sublevel family and the optimal Type-II density coefficient for fixed small u
 
 **Erdős–Straus Research Lab**
-**Date:** 23 November 2026
+**Original draft date:** 23 November 2026
+**Latest revision:** 24 November 2026
 **Claim ID:** `ES4-TOTIENT-SUBLEVEL-01`
 **Status:** a derived corollary of Dahan's Theorem 4.6, using a Wiener–Ikehara counting argument. It is not a proof of the Erdős–Straus conjecture and does not prove that the small-u exceptional set is empty.
 
@@ -316,43 +317,122 @@ N\exp\left(-\left(\frac5{96}\gamma\tau A_\infty+o(1)\right)L^2\right).
 \]
 This proves (14.1)–(14.3).
 
-## 8. Optimality for the mean-modulus constraint
+## 8. Optimality for the mean-modulus constraint: corrected layer-cake proof
 
-The same counting asymptotic gives more than a good construction. It shows that the totient-sublevel family is asymptotically optimal among **all** finite families of coprime pairs with \(u\le4\), if the only resource constraint is the mean-modulus condition in Theorem 4.6.
+The same counting asymptotic gives an exact variational statement, without any assumption about how many pairs are tied at a cutoff. Put
+\[
+w(u,a)=\varphi(4ua)-2\ge0,
+\]
+and define
+\[
+F(x)=\#\{(u,a):1\le u\le4,\ (u,a)=1,\ w(u,a)\le x\},
+\qquad
+G(x)=\sum_{w(u,a)\le x}w(u,a).
+\]
+By Lemma 14.1 and the definition of \(A_\infty\),
+\[
+F(x)=\left(\frac{A_\infty}{2}+o(1)\right)x=: (c+o(1))x,
+\qquad c=\frac{A_\infty}{2}.
+\]
+Partial summation gives
+\[
+G(x)=xF(x)-\int_0^xF(t)\,dt
+=\left(\frac{c}{2}+o(1)\right)x^2.
+\tag{14.19}
+\]
 
-Let the costs of all admissible pairs be
+For any finite set \(S\) of \(P\) distinct admissible pairs, the layer-cake identity is
 \[
-w(u,a)=\varphi(4ua)-2,
+\sum_{(u,a)\in S}w(u,a)
+=\int_0^\infty\#\{(u,a)\in S:w(u,a)>t\}\,dt.
 \]
-and let
+At most \(F(t)\) elements of \(S\) can have cost at most \(t\). Hence
 \[
-F(x)=\#\{(u,a):1\le u\le4,\ (u,a)=1,\ w(u,a)\le x\}.
+\sum_{(u,a)\in S}w(u,a)
+\ge \int_0^\infty(P-F(t))_+\,dt.
+\tag{14.20}
 \]
-By Lemma 14.1,
+
+We now evaluate this integral without estimating any fixed-width jump of \(F\). Fix \(0<\varepsilon<c\). There is \(T_\varepsilon\) such that, for all \(t\ge T_\varepsilon\),
 \[
-F(x)=(A_\infty/2+o(1))x,
+(c-\varepsilon)t\le F(t)\le(c+\varepsilon)t.
 \]
-while Lemma 14.2 gives
+It follows that
 \[
-\sum_{w(u,a)\le x}w(u,a)
-=(A_\infty/4+o(1))x^2.
+\begin{aligned}
+\int_0^\infty(P-F(t))_+\,dt
+&\ge \int_{T_\varepsilon}^{P/(c+\varepsilon)}
+       (P-(c+\varepsilon)t)\,dt,\\
+\int_0^\infty(P-F(t))_+\,dt
+&\le PT_\varepsilon+
+   \int_{T_\varepsilon}^{P/(c-\varepsilon)}
+       (P-(c-\varepsilon)t)\,dt.
+\end{aligned}
 \]
-Among all sets of a given cardinality \(P\), the sum of the \(P\) smallest costs is minimal. Since \(F(x)\sim(A_\infty/2)x\), the sum of the \(P\) smallest costs is
+After division by \(P^2\) and passage to \(P\to\infty\), the lower and upper limits are squeezed between \(1/(2(c+\varepsilon))\) and \(1/(2(c-\varepsilon))\). Letting \(\varepsilon\downarrow0\),
 \[
-\left(\frac{1}{A_\infty}+o(1)\right)P^2.
+\int_0^\infty(P-F(t))_+\,dt
+\sim\frac{P^2}{2c}.
+\tag{14.21}
 \]
-Consequently any family \(\mathcal P\) of \(P\to\infty\) admissible pairs satisfying
+
+For the matching upper bound on the minimum, fix \(\varepsilon>0\) and put
+\[
+x_+=\frac{(1+\varepsilon)P}{c}.
+\]
+Since \(F(x_+)/P\to1+\varepsilon\), for all sufficiently large \(P\) there are at least \(P\) admissible pairs of cost at most \(x_+\). The sum of the \(P\) least costs is therefore at most \(G(x_+)\), and (14.19) gives
+\[
+G(x_+)=\left(\frac{(1+\varepsilon)^2}{2c}+o(1)\right)P^2.
+\]
+Combining this with (14.20)–(14.21), then letting \(\varepsilon\downarrow0\), proves
+\[
+\boxed{
+\min_{|S|=P}\sum_{(u,a)\in S}w(u,a)
+\sim\frac{P^2}{2c}=\frac{P^2}{A_\infty}.
+}
+\tag{14.22}
+\]
+Consequently, every family of \(P\to\infty\) distinct admissible pairs satisfying
 \[
 \frac1P\sum_{(u,a)\in\mathcal P}w(u,a)\le\tau L
 \]
-must have
+must obey
 \[
 \boxed{P\le(\tau A_\infty+o(1))L.}
-\tag{14.19}
+\tag{14.23}
 \]
-Our family (14.12) has \(P_N=(\gamma\tau A_\infty+o(1))L\), and \(\gamma\) can be chosen arbitrarily close to 1. Thus it approaches the maximal pair-count coefficient allowed by the mean-modulus budget. This proves optimality **for the family-size/mean-cost variational problem**, not for every possible use of Dahan's sieve and not for other methods.
+Our totient-sublevel family has
+\[
+P_N=(\gamma\tau A_\infty+o(1))L,
+\]
+so for any fixed \(\gamma<1\) it approaches the optimal coefficient to within the factor \(\gamma\); fixed values of \(\gamma\) can be chosen arbitrarily close to 1. This is optimality **only for maximizing the number of selected pairs under the stated mean-cost budget and the restriction \(u\le4\)**. It is not a claim of optimality among all sieve methods, all formulations, or all parameter ranges.
 
-## 9. Finite arithmetic audit
+The earlier tie-count argument should not be used: \(F(x)=cx+o(x)\) alone does not imply that the number of pairs tied at a cutoff is \(o(P)\). The layer-cake proof above avoids that unsupported inference entirely.
+
+## 9. Comparison with Phase 12: rectangular versus cost-sublevel selection
+
+Phase 12 optimized the family only within a **rectangular four-slice ansatz**: for each fixed \(u\in\{1,2,3,4\}\), it selected coprime modulators up to a cutoff \(a\le A_u\). Under the same asymptotic mean-cost budget \(\tau L\), its maximal pair-count coefficient within that ansatz is
+\[
+S_{\rm rect}=\sum_{u=1}^4\frac{d_u}{c_u}
+=\frac{361\pi^2}{1728}
+\approx2.061879160181,
+\]
+where \(d_u=\varphi(u)/u\) and \(c_u\) are the constants in Lemma 12.1 of the Phase 12 note. Thus Phase 12 gives the upper coefficient \(\tau S_{\rm rect}\) for rectangular families.
+
+Phase 14 instead ranks **all admissible pairs** with \(u\le4\) by their actual cost \(w(u,a)=\varphi(4ua)-2\). The layer-cake argument proves that the corresponding unrestricted family-size coefficient under the same mean-cost budget is \(\tau A_\infty\), where
+\[
+A_\infty=\frac{31}{28}\frac{\zeta(2)\zeta(3)}{\zeta(6)}
+\approx2.151838912194.
+\]
+The ratio of these budget-normalized pair-count coefficients is
+\[
+\frac{A_\infty}{S_{\rm rect}}\approx1.043629982664,
+\]
+so the cost-sublevel selection improves the **pair-count coefficient by approximately 4.3630%** over the best rectangular four-slice selection, when compared at the same \(\tau\) and \(\gamma\).
+
+This percentage compares the asymptotic pair-count coefficients, not the two particular numerical density exponents printed in Phase 12 and Phase 14: those examples use different choices of \(\gamma\) and \(\delta_0\). Nor does the comparison imply a 4.3630% improvement to the original Erdős–Straus exceptional-set bound. It is a sharper selection rule inside Dahan's Theorem 4.6 and the restricted range \(u\le4\).
+
+## 10. Finite arithmetic audit
 
 `src/phase14_totient_sublevel.py` constructs the family (14.12) for selected surrogate values of \(L\). It uses exact integer totients and the proven upper bound \(a\le T_N^2/(2u)\) to make the search finite. The audit checks:
 
@@ -371,9 +451,9 @@ python -m unittest discover -s tests -v
 python src/phase14_totient_sublevel.py --output results/PHASE14-TOTIENT-SUBLEVEL-DENSITY-LOCAL.json
 ```
 
-## 10. Attribution and scope
+## 11. Attribution and scope
 
 - The Type-II divisor criterion and Dahan's Theorem 4.6 are from Benjamin Dahan, arXiv:2611.08717v1 (2026-11-05), Theorem 4.6, equations (27)–(28).
 - The Wiener–Ikehara Tauberian theorem is standard. A statement with exactly the nonnegative-coefficient and analytic-continuation hypotheses used here is reproduced in Jacob Korevaar, *Ikehara-Type Theorem Involving Boundedness*, arXiv:0807.0537, Theorem 1.1; see also *Tauberian Theory: A Century of Developments*, Springer (2004). Links: https://arxiv.org/abs/0807.0537 and https://doi.org/10.1007/978-3-662-10225-1.
-- Derived here: the four Euler products for the totient-sublevel counting functions, the constants \(\lambda_u\), the aggregate constant \(A_\infty\), the totient-sublevel family, and the optimality statement (14.19) for Dahan's mean-modulus family-size constraint.
+- Derived here: the four Euler products for the totient-sublevel counting functions, the constants \(\lambda_u\), the aggregate constant \(A_\infty\), the totient-sublevel family, and the optimality statements (14.22)-(14.23) for Dahan's mean-modulus family-size constraint.
 - Not claimed: a witness for every prime, the vanishing of \(\mathcal E_4(N)\), a proof of the Erdős–Straus conjecture, or optimality among all analytic/combinatorial approaches.
