@@ -27,7 +27,7 @@ This repository is a reproducible workbench for selected divisor criteria and Ty
 
 ### Clone the repository
 ```bash
-git clone https://://github.com.git
+git clone https://github.com/IsaacAmer/erdos-straus-research.git
 cd erdos-straus-research
 ```
 
