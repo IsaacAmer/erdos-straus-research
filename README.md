@@ -3,7 +3,7 @@
 - **Project type:** Independent computational and analytic workbench in number theory
 - **Repository:** <https://github.com/IsaacAmer/erdos-straus-research>
 - **Documentation snapshot:** 24 November 2026
-- **Git base:** `cf602b54b285043a387d27602edc70d55201772a`
+- **Git base:** `cc02edb`
 - **Verification state:** the 119-test run reported below was performed on the working tree based on that commit, after the local Phase 14 documentation/source correction; those local changes had not yet been committed at the time of the run.
 
 ## Overview
@@ -50,17 +50,17 @@ The local JSON output is ignored by Git and is intended for reproducibility chec
 - **Phase 9:** a local comparison of two search implementations on selected prime inputs.
 - **Phases 10–11:** finite Jacobi-symbol and small-$u$ character/square-class audits.
 - **Phase 11 density corollary:** a coarse finite family of Type-II pairs with $u\le4$, used in an application of Dahan's Theorem 4.6.
-- **Phase 12:** an optimized *rectangular four-slice* family, with separate cutoffs $a\le A_u$ for each $u\in\{1,2,3,4\}$.
+- **Phase 12:** an optimized *rectangular four-slice* family, with separate cutoffs $a\le A_u$ for each $u\in\lbrace 1,2,3,4\rbrace $.
 - **Phase 14:** a *totient-sublevel* family selected by the actual cost $w(u,a)=\varphi(4ua)-2$, together with a corrected layer-cake optimality argument.
 
 The current integrated test inventory contains Phase 6–12 and Phase 14 tests. There is no separate `test_phase13_*.py` module in the tested inventory; Phase 13 should not be described as a separately validated component unless its status and files are documented independently.
 
 ## Phase 14: restricted Type-II density corollary
 
-For $u\in\{1,2,3,4\}$, the note studies
+For $u\in\lbrace 1,2,3,4\rbrace $, the note studies
 
 $$
-F_u(X)=\#\{a\ge1:(a,u)=1,\ \varphi(4ua)\le X\}.
+F_u(X)=\#\lbrace a\ge1:(a,u)=1,\ \varphi(4ua)\le X\rbrace .
 $$
 
 The derived fixed-$u$ constants are
@@ -91,7 +91,7 @@ Selecting all admissible pairs with $u\le4$ and $\varphi(4ua)\le2\gamma\tau\log\
 
 $$
 |\mathcal E_4(N)|\ll
-N\exp\!\left(-\left(\kappa+o(1)\right)(\log\log N)^2\right),
+N\exp\left(-\left(\kappa+o(1)\right)(\log\log N)^2\right),
 \qquad
 \kappa=\frac5{96}\gamma\tau A_\infty.
 $$
@@ -157,11 +157,11 @@ The following are finite, environment-specific software checks, not universal ma
 On 24 November 2026, the maintainer reported the following run on Windows 11, Python 3.15.2, using the repository's `.venv` interpreter:
 
 - Phase 14-specific suite: **11 tests passed** in 0.341 s.
-- Full discovered suite: **119 tests passed in 2.575 s**.
-- `python src/phase14_totient_sublevel.py` completed and reported the constants above, with finite audit values $L\in\{100,250,500,1000\}$.
+- Full discovered suite: **119 tests passed in 2.715 s**.
+- `python src/phase14_totient_sublevel.py` completed and reported the constants above, with finite audit values $L\in\lbrace 100,250,500,1000\rbrace $.
 - `git diff --check` returned no whitespace errors.
 
-These checks were run on the working tree based on commit `cf602b5`, **after** the local Phase 14 note and program-metadata edits, but **before** those edits were committed. They therefore document that tested working tree, not the unmodified commit alone. The finite $L$-values are surrogate implementation audits, not a search over primes up to a corresponding value of $N$.
+These checks were run on the working tree based on commit `cc02edb`, **after** the local Phase 14 note and program-metadata edits, but **before** those edits were committed. They therefore document that tested working tree, not the unmodified commit alone. The finite $L$-values are surrogate implementation audits, not a search over primes up to a corresponding value of $N$.
 
 To reproduce the tests from the repository root in Windows PowerShell:
 
