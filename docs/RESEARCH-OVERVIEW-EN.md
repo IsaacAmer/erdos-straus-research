@@ -18,3 +18,12 @@ The project emphasizes reproducibility and research integrity: published results
 ## Keywords
 
 Erdős–Straus conjecture; Egyptian fractions; Type-II divisor witnesses; exact arithmetic; computational number theory; Euler totient; Jacobi symbols; reproducibility.
+
+
+## Documentation & Verification Snapshot (Commit `cc02edb`)
+
+- **Reference commit:** `cc02edb` on `main`
+- **Local verification environment:** Windows 11, Python 3.15.2 (`.venv`)
+- **Local test suite:** 119 tests passed in 2.715 s (run on the working tree that became `cc02edb`)
+- **CI status (GitHub Actions):** 4 workflow jobs passing on `cc02edb`
+- **Phase 13 status:** Phase 13 is not an integrated or tested module in the current release (`v0.1.0`), and the status of any historical work related to it remains unresolved.
